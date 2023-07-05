@@ -21,7 +21,7 @@ Role/Strengths:
 Role/Strengths: 
 
 - Karnik Shah (GitHub: [@KarnikShah](https://github.com/KarnikShah))  
-Role/Strengths: 
+Role/Strengths: FrontEnd Developer
 
 
 ## Core Features
