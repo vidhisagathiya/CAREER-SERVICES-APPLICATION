@@ -26,18 +26,33 @@ Role/Strengths: FrontEnd Developer
 
 ## Core Features
 
-- **User-friendly interface** - The platform provides an intuitive and easy-to-use interface for both students and employers, ensuring a smooth user experience.
+**Feature 1: User Registration and Login**
 
-- **Portfolio creation and updating** - Students can create their professional portfolios within the platform, highlighting their skills, qualifications, work experience, and achievements. They can also regularly update their portfolios to showcase their latest accomplishments.
+- User registration: Employers, students, and admin can create an account by providing their basic information such as name, email, and password.
+- Login: Users can securely log in to the platform using their registered email and password.
 
-- **Job posting and management** - Employers have the ability to post job openings on the platform, providing detailed descriptions of the positions available, required qualifications, and application instructions. They can also manage and track the status of their job postings.
+**Feature 2: Employer Profile Management**
 
-- **Efficient search and connection** - Description: The platform offers efficient search capabilities, allowing users to find relevant job opportunities or suitable candidates based on various criteria such as location, industry, skills, and experience. It facilitates seamless connections between job seekers and employers.
+- Profile creation: Employers can create their profiles by entering their company information, industry, and contact details.
+- Job offer management: Employers can add job offers, including detailed descriptions of the positions available, required qualifications, and application instructions.
+- Candidate browsing: Employers can browse through candidate profiles and resumes to find suitable candidates for their job offers.
+- Candidate selection: Employers can select candidates who have already applied for a job offer and shortlist them for interviews.
+- Post tracking: Employers can track the status of their job postings, including the number of views, applications, and the progress of the hiring process.
 
-- **Shortlisting of potential employees** - Employers can easily shortlist potential employees based on their specific requirements, such as qualifications, experience, and skills. This feature streamlines the selection process, saving time and effort for employers.
+**Feature 3: Student/Candidate Profile Management**
 
-- **Secure login credentials and data protection** - The platform prioritizes the security and privacy of user data. It ensures secure login credentials and implements robust data protection measures to safeguard personal and sensitive information.
+- Profile creation: Students can create their profiles by entering their personal details, educational background, work experience, skills, and achievements.
+- Resume upload: Students can build and upload their resumes to make them accessible to potential employers.
+- Job offer browsing: Students can browse through job offers posted by employers.
+- Application tracking: Students can track the status of their job applications and view any updates from employers.
 
-- **Notifications for job offers** - Employers receive notifications when students apply to their job offers, keeping them informed and enabling prompt follow-ups.
+**Feature 4: Admin Dashboard**
 
-- **Interview notifications** - Students are notified when they are called for interviews by employers, ensuring they stay updated and can prepare accordingly.
+- User management: The admin can manage user profiles, including verifying registrations, handling account-related issues, and ensuring data accuracy.
+- Posting management: The admin can monitor and manage job postings, including approving, editing, or removing posts.
+- Application tracking: The admin can track and manage the status of job applications, assisting with the selection process.
+
+**Feature 5: Notifications and Communication**
+
+- Job offer notifications: Employers receive notifications when students apply to their job offers, allowing them to promptly review and respond to applications.
+- Interview notifications: Students receive notifications when they are invited for interviews by employers, enabling them to prepare accordingly.
