@@ -1,28 +1,24 @@
 # Career Services Application
 
-The Career Services Application is an online system aimed at providing a comprehensive career services experience for both job-seeking candidates and employers. The platform enables students to create and update their portfolios while allowing employers to post job openings. With this platform, users can efficiently search and connect with potential job opportunities and candidates, streamlining the job headhunting process. The system enhances the job-seeking experience by empowering candidates to tailor their profiles to match market demands, and employers can easily shortlist potential employees based on their requirements.
-
+The Career Services Application is an advanced online platform designed to offer a comprehensive career services experience for job-seeking candidates and employers alike. This robust system allows students to create and regularly update their portfolios, while enabling employers to effortlessly post job openings. By leveraging this platform, users can efficiently search for and connect with potential job opportunities and candidates, thereby streamlining the job headhunting process. The system significantly enhances the job-seeking experience by empowering candidates to customize their profiles according to market demands, while enabling employers to easily shortlist potential employees based on their specific requirements.
 
 ## Team Members
 
-- Anurag Agarwal (GitHub: [@anuragagarwal6895](https://github.com/anuragagarwal6895))  
-Role/Strengths:
+| Name                        | GitHub Username             | Email Address               | Role/Strengths        |
+|-----------------------------|-----------------------------|-----------------------------|-----------------------|
+| Anurag Agarwal               | [@anuragagarwal6895][1]     | anuragarwal6895@gmail.com   |                       |
+| Shrey Satish Agrawal        | [@Shrey1002][2]             | shrey618@gmail.com          |                       |
+| Aksharkumar Yogeshkumar Patel | [@aksharpatel17][3]        | axarpatel01@gmail.com       |                       |
+| Vidhi Vinodbhai Sagathiya   | [@vidhisagathiya][4]        | vidhisagathiya028@gmail.com |                       |
+| Sagar Sanghani              | [@Sagar7421][5]             | sasagarsa1998@gmail.com     |                       |
+| Karnik Shah                 | [@KarnikShah][6]            | shahkarnik12@gmail.com      | FrontEnd Developer    |
 
-- Shrey Satish Agrawal (GitHub: [@Shrey1002](https://github.com/Shrey1002))  
-Role/Strengths:
-
-- Aksharkumar Yogeshkumar Patel (GitHub: [@aksharpatel17](https://github.com/aksharpatel17))  
-  Role/Strengths:
-  
-- Vidhi Vinodbhai Sagathiya (GitHub: [@vidhisagathiya](https://github.com/vidhisagathiya))  
-Role/Strengths:
-
-- Sagar Sanghani (GitHub: [@Sagar7421](https://github.com/Sagar7421))  
-Role/Strengths: 
-
-- Karnik Shah (GitHub: [@KarnikShah](https://github.com/KarnikShah))  
-Role/Strengths: FrontEnd Developer
-
+[1]: https://github.com/anuragagarwal6895
+[2]: https://github.com/Shrey1002
+[3]: https://github.com/aksharpatel17
+[4]: https://github.com/vidhisagathiya
+[5]: https://github.com/Sagar7421
+[6]: https://github.com/KarnikShah
 
 ## Core Features
 
