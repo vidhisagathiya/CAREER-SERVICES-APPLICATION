@@ -20,6 +20,39 @@ The Career Services Application is an advanced online platform designed to offer
 [5]: https://github.com/Sagar7421
 [6]: https://github.com/KarnikShah
 
+## Project Approach and Technologies
+
+Our project, "CareerConnect" (Web-Application for Career Service) employs an adaptable approach to software development and will use agile methodology to manage all project operations. Scrum Methodology is the best agile approach for our project's development, taking into account the needs of the client and the project's limitations.
+
+**Planning and Research**
+
+- We will begin by learning about related career websites and comprehending the features and functionality that are frequently there.
+
+**Website sketch**
+
+- To specify the layout, user flow, and general look and feel of the website, we will build wireframes and mockups. A user-friendly interface will be created while also keeping the user experience in mind.
+
+**Designing User Interface**
+
+- To make the website's UI responsive and user-friendly, we'll use HTML, CSS, and JavaScript. This must have login, registration, job search, and profile pages for candidates and employers.
+
+**Implementing Authentication and Authorization System**
+
+- A secure authentication and authorization mechanism for the website will be implemented using Node.Js. Functions for CRUD operations on user accounts and passwords should be included in this.
+
+**Create the Database**
+
+- A database will be made using MongoDB to hold user and job data. Tables must be made for users, jobs, and applications.
+
+**Testing Website**
+
+- After all the features have been included, we will extensively test the website to make sure everything is working as it should and that there are no security flaws.
+
+**Deploy the Website**
+
+- We may employ a hosting service to launch the website once it has undergone testing and is ready.
+
+
 ## Core Features
 
 **Feature 1: User Registration and Login**
@@ -45,7 +78,7 @@ The Career Services Application is an advanced online platform designed to offer
 **Feature 4: Admin Dashboard**
 
 - User management: The admin can manage user profiles, including verifying registrations, handling account-related issues, and ensuring data accuracy.
-- Posting management: The admin can monitor and manage job postings, including approving, editing, or removing posts.
+- Posting Management: The admin can monitor and manage job postings, including approving, editing, or removing posts.
 - Application tracking: The admin can track and manage the status of job applications, assisting with the selection process.
 
 **Feature 5: Notifications and Communication**
