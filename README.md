@@ -1,6 +1,6 @@
-# Career Services Application
+ # Career Services Application
 
-The Career Services Application is an advanced online platform designed to offer a comprehensive career services experience for job-seeking candidates and employers alike. This robust system allows students to create and regularly update their portfolios, while enabling employers to effortlessly post job openings. By leveraging this platform, users can efficiently search for and connect with potential job opportunities and candidates, thereby streamlining the job headhunting process. The system significantly enhances the job-seeking experience by empowering candidates to customize their profiles according to market demands, while enabling employers to easily shortlist potential employees based on their specific requirements.
+The Career Services Application is an advanced online platform designed to offer a comprehensive career services experience for job-seeking candidates and employers alike. This robust system allows students to create and regularly update their portfolios while enabling employers to effortlessly post job openings. By leveraging this platform, users can efficiently search for and connect with potential job opportunities and candidates, thereby streamlining the job headhunting process. The system significantly enhances the job-seeking experience by empowering candidates to customize their profiles according to market demands, while enabling employers to easily shortlist potential employees based on their specific requirements.
 
 ## Team Members
 
@@ -22,7 +22,7 @@ The Career Services Application is an advanced online platform designed to offer
 
 ## Project Approach and Technologies
 
-Our project, "CareerConnect" (Web-Application for Career Service) employs an adaptable approach to software development and will use agile methodology to manage all project operations. Scrum Methodology is the best agile approach for our project's development, taking into account the needs of the client and the project's limitations.
+Our project, "CareerConnect" (Web-Application for Career Service) employs an adaptable approach to software development and will use agile methodology to manage all project operations. Scrum Methodology is the best agile approach for our project's development, taking into account the needs of the client and the project's limitations. Some of the main steps followed in this approach are:
 
 **Planning and Research**
 
