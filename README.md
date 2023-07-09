@@ -28,7 +28,7 @@ Our project, "CareerConnect" (Web-Application for Career Service) employs an ada
 
 - We will begin by learning about related career websites and comprehending the features and functionality that are frequently there.
 
-**Website sketch**
+**Website Sketch**
 
 - To specify the layout, user flow, and general look and feel of the website, we will build wireframes and mockups. A user-friendly interface will be created while also keeping the user experience in mind.
 
@@ -40,7 +40,7 @@ Our project, "CareerConnect" (Web-Application for Career Service) employs an ada
 
 - A secure authentication and authorization mechanism for the website will be implemented using Node.Js. Functions for CRUD operations on user accounts and passwords should be included in this.
 
-**Create the Database**
+**Creating Database**
 
 - A database will be made using MongoDB to hold user and job data. Tables must be made for users, jobs, and applications.
 
@@ -48,7 +48,7 @@ Our project, "CareerConnect" (Web-Application for Career Service) employs an ada
 
 - After all the features have been included, we will extensively test the website to make sure everything is working as it should and that there are no security flaws.
 
-**Deploy the Website**
+**Deploying Website**
 
 - We may employ a hosting service to launch the website once it has undergone testing and is ready.
 
