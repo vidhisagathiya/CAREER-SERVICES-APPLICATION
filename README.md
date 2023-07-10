@@ -20,7 +20,21 @@ The Career Services Application is an advanced online platform designed to offer
 [5]: https://github.com/Sagar7421
 [6]: https://github.com/KarnikShah
 
-## Project Approach and Technologies
+## Technologies Used:
+
+**Frontend:**
+
+- HTML, CSS, JavaScript, Bootstrap
+
+**Backend:**
+
+- NodeJS
+
+**Database:**
+
+- MongoDB
+
+## Project Approach
 
 Our project, "CareerConnect" (Web-Application for Career Service) employs an adaptable approach to software development and will use agile methodology to manage all project operations. Scrum Methodology is the best agile approach for our project's development, taking into account the needs of the client and the project's limitations. Some of the main steps followed in this approach are:
 
