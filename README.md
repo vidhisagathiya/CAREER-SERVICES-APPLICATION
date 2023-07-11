@@ -24,7 +24,7 @@ The Career Services Application is an advanced online platform designed to offer
 
 **Frontend:**
 
-- HTML, CSS, JavaScript, Bootstrap
+- HTML, CSS, JavaScript, ReactJS
 
 **Backend:**
 
