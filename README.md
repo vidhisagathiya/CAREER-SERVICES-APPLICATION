@@ -6,12 +6,12 @@ The Career Services Application is an advanced online platform designed to offer
 
 | Name                        | GitHub Username             | Email Address               | Role/Strengths        |
 |-----------------------------|-----------------------------|-----------------------------|-----------------------|
-| Anurag Agarwal               | [@anuragagarwal6895][1]     | anuragarwal6895@gmail.com   |                       |
-| Shrey Satish Agrawal        | [@Shrey1002][2]             | shrey618@gmail.com          |                       |
-| Aksharkumar Yogeshkumar Patel | [@aksharpatel17][3]        | axarpatel01@gmail.com       |                       |
-| Vidhi Vinodbhai Sagathiya   | [@vidhisagathiya][4]        | vidhisagathiya028@gmail.com |                       |
-| Sagar Sanghani              | [@Sagar7421][5]             | sasagarsa1998@gmail.com     |                       |
-| Karnik Shah                 | [@KarnikShah][6]            | shahkarnik12@gmail.com      | FrontEnd Developer    |
+| Anurag Agarwal               | [@anuragagarwal6895][1]     | anuragarwal6895@gmail.com   |    Scrum Master                   |
+| Shrey Satish Agrawal        | [@Shrey1002][2]             | shrey618@gmail.com          |      QA Analyst/ Software Developer                |
+| Aksharkumar Yogeshkumar Patel | [@aksharpatel17][3]        | axarpatel01@gmail.com       |          Lead Software Developer             |
+| Vidhi Vinodbhai Sagathiya   | [@vidhisagathiya][4]        | vidhisagathiya028@gmail.com | Product Owner                     |
+| Sagar Sanghani              | [@Sagar7421][5]             | sasagarsa1998@gmail.com     |   Software Architect                    |
+| Karnik Shah                 | [@KarnikShah][6]            | shahkarnik12@gmail.com      | Design Analyst/ Software Developer |
 
 [1]: https://github.com/anuragagarwal6895
 [2]: https://github.com/Shrey1002
@@ -71,7 +71,7 @@ Our project, "CareerConnect" (Web-Application for Career Service) employs an ada
 
 **Feature 1: User Registration and Login**
 
-- User registration: Employers, students, and admin can create an account by providing their basic information such as name, email, and password.
+- User registration: Employers, students, and admin can create an account by providing their basic information such as name, email, and passwor.
 - Login: Users can securely log in to the platform using their registered email and password.
 
 **Feature 2: Employer Profile Management**
@@ -91,7 +91,7 @@ Our project, "CareerConnect" (Web-Application for Career Service) employs an ada
 
 **Feature 4: Admin Dashboard**
 
-- User management: The admin can manage user profiles, including verifying registrations, handling account-related issues, and ensuring data accuracy.
+- User management: The admin can manage user profiles.
 - Posting Management: The admin can monitor and manage job postings, including approving, editing, or removing posts.
 - Application tracking: The admin can track and manage the status of job applications, assisting with the selection process.
 
