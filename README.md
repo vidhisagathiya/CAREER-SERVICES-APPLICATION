@@ -71,7 +71,7 @@ Our project, "CareerConnect" (Web-Application for Career Service) employs an ada
 
 **Feature 1: User Registration and Login**
 
-- User registration: Employers, students, and admin can create an account by providing their basic information such as name, email, and passwor.
+- User registration: Employers, students, and admin can create an account by providing their basic information such as name, email, and password.
 - Login: Users can securely log in to the platform using their registered email and password.
 
 **Feature 2: Employer Profile Management**
