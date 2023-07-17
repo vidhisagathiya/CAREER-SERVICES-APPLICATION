@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 //Candidate main Documents
 const candidateSchema = new mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     
     firstName:{
         type: String,
@@ -24,6 +25,7 @@ const candidateSchema = new mongoose.Schema({
     },
     company:{
         type: String,
+        default: ""
     },
     phone:{
         type: String,
