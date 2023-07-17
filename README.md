@@ -69,33 +69,30 @@ Our project, "CareerConnect" (Web-Application for Career Service) employs an ada
 
 ## Core Features
 
-**Feature 1: User Registration and Login**
+**Feature 1: Employer Profile Management**
 
-- User registration: Employers, students, and admin can create an account by providing their basic information such as name, email, and password.
-- Login: Users can securely log in to the platform using their registered email and password.
-
-**Feature 2: Employer Profile Management**
-
+- Registration & Login : Employers can create an account by providing their basic information such as name, email, and password and securely log in to the platform using their registered email and password.
 - Profile creation: Employers can create their profiles by entering their company information, industry, and contact details.
-- Job offer management: Employers can add job offers, including detailed descriptions of the positions available, required qualifications, and application instructions.
-- Candidate browsing: Employers can browse through candidate profiles and resumes to find suitable candidates for their job offers.
+- Job postings management: Employers can add job posting, including detailed descriptions of the positions available, required qualifications, and application instructions.
+- Candidate browsing: Employers can browse through candidate profiles and resumes to find suitable candidates for their job postings.
 - Candidate selection: Employers can select candidates who have already applied for a job offer and shortlist them for interviews.
-- Post tracking: Employers can track the status of their job postings, including the number of views, applications, and the progress of the hiring process.
+- Job posting notifications: Employers receive notifications when students apply to their job postings, allowing them to promptly review and respond to applications.
 
-**Feature 3: Student/Candidate Profile Management**
+**Feature 2: Student/Candidate Profile Management**
 
+- Registration & Login : Students can create an account by providing their basic information such as name, email, and password and securely log in to the platform using their registered email and password.
 - Profile creation: Students can create their profiles by entering their personal details, educational background, work experience, skills, and achievements.
 - Resume upload: Students can build and upload their resumes to make them accessible to potential employers.
-- Job offer browsing: Students can browse through job offers posted by employers.
+- Job offer browsing: Students can browse through job postings posted by employers.
+- Interview notifications: Students receive notifications when they are invited for interviews by employers, enabling them to prepare accordingly.
+
+**Feature 3: Tracking**
+
+- Post tracking: Employers can track the status of their job postings, including the number of views, applications, and the progress of the hiring process.
 - Application tracking: Students can track the status of their job applications and view any updates from employers.
 
 **Feature 4: Admin Dashboard**
 
 - User management: The admin can manage user profiles.
 - Posting Management: The admin can monitor and manage job postings, including approving, editing, or removing posts.
-- Application tracking: The admin can track and manage the status of job applications, assisting with the selection process.
-
-**Feature 5: Notifications and Communication**
-
-- Job offer notifications: Employers receive notifications when students apply to their job offers, allowing them to promptly review and respond to applications.
-- Interview notifications: Students receive notifications when they are invited for interviews by employers, enabling them to prepare accordingly.
+- Application tracking: The admin can track and manage the status of job applications.
