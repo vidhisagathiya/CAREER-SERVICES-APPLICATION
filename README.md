@@ -1,11 +1,11 @@
  # Career Services Application
 
-The Career Services Application is an advanced online platform designed to offer a comprehensive career services experience for job-seeking candidates and employers alike. This robust system allows students to create and regularly update their portfolios while enabling employers to effortlessly post job openings. By leveraging this platform, users can efficiently search for and connect with potential job opportunities and candidates, thereby streamlining the job headhunting process. The system significantly enhances the job-seeking experience by empowering candidates to customize their profiles according to market demands, while enabling employers to easily shortlist potential employees based on their specific requirements.
-
-
 <p align="center">
   <img width="490" height="400" src="./ONLINE-JOB-SEARCH-1024x512.png">
 </p>
+
+
+The Career Services Application is an advanced online platform designed to offer a comprehensive career services experience for job-seeking candidates and employers alike. This robust system allows students to create and regularly update their portfolios while enabling employers to effortlessly post job openings. By leveraging this platform, users can efficiently search for and connect with potential job opportunities and candidates, thereby streamlining the job headhunting process. The system significantly enhances the job-seeking experience by empowering candidates to customize their profiles according to market demands, while enabling employers to easily shortlist potential employees based on their specific requirements.
 
 
 ## Team Members and Roles
