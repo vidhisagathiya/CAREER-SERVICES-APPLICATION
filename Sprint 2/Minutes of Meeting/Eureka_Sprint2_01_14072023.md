@@ -39,4 +39,4 @@ _Karnik Shah_
 ---
 
 
-## Next Meeting: July 17, 2023
+## Next Meeting: July 16, 2023
