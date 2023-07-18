@@ -26,17 +26,17 @@ _Karnik Shah_
 
 ### 2. Discussion of tasks for Sprint 2
 
-**Summary of Discussion**: The team discussed any outstanding issues or challenges that were identified during the previous sprint. Each issue was examined, and potential root causes were analyzed. Team members provided input and suggestions for addressing these issues. The goal was to find effective solutions or workarounds to mitigate the impact of the challenges on the project's progress. Actions were assigned to individuals or sub-teams responsible for resolving these issues.
+**Summary of Discussion**: Moving forward to Sprint 2, the team discussed the tasks and deliverables to be accomplished. Based on the project's objectives, user stories and features were prioritized for implementation during this sprint. Team members provided input on the complexity and feasibility of the tasks, ensuring that the workload was distributed evenly and that each task aligned with the sprint's goals.
 
-### 3. Planning for the upcoming sprint
+### 3. Identifying and addressing mistakes from Sprint 1
 
-**Summary of Discussion**: The upcoming sprint was the focus of this agenda item. The team discussed the goals and objectives to be achieved during the next sprint. Based on the project requirements and priorities, user stories and features were selected for implementation. Dependencies and potential risks were identified and taken into account during the planning process. The team collaborated to estimate the effort required for each task and determined a realistic sprint timeline.
+**Summary of Discussion**: The team took the opportunity to identify any mistakes or challenges faced during Sprint 1. Each issue was thoroughly examined, and potential root causes were discussed openly. The aim was to learn from these mistakes and determine actionable solutions to prevent their recurrence in Sprint 2. Team members were encouraged to share their perspectives and contribute to the collective understanding of the challenges faced.
 
-### 4. Assigning tasks and responsibilities
+### 4. Improvements for Sprint 2
 
-**Summary of Discussion**: To ensure clarity and accountability, tasks and responsibilities were assigned to team members. Each team member's skills, expertise, and availability were taken into consideration when making these assignments. The goal was to allocate tasks in a balanced and efficient manner, ensuring that each team member understood their role and had the necessary resources to complete their assigned tasks successfully. Deadlines and milestones were established, and expectations were communicated clearly.
+**Summary of Discussion**: Building on the lessons learned from Sprint 1, the team brainstormed strategies and improvements to implement during Sprint 2. The focus was on enhancing collaboration, communication, and efficiency to optimize the workflow. The team also addressed any bottlenecks or impediments encountered during the first sprint and devised measures to avoid similar hurdles in the upcoming sprint. Specific actions and changes to be implemented were recorded for future reference.
 
 ---
 
 
-## Next Meeting: July 16, 2023
+## Next Meeting: July 14, 2023
