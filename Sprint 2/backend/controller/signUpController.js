@@ -20,6 +20,7 @@ const candidateSignup = async (req, res) => {
       const hashedPassword = await bcrypt.hash(password, 10);
   
       // Create a new candidate instance
+      
       const candidate = new Candidate({
         firstname,
         lastname,
