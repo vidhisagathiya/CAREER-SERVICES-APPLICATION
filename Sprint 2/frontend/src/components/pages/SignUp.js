@@ -83,14 +83,14 @@ function SignUp() {
   useEffect(() => {
     if (postable) {
       fetch("http://localhost:9000/Signup", {
-        // Enter your IP address here
+      
 
         method: "POST",
         mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(inputs), // body data type must match "Content-Type" header
+        body: JSON.stringify(inputs), 
       })
         .then((response) => response.json())
         .then((json) => {
@@ -192,56 +192,7 @@ function SignUp() {
                     style={{ width: '100%' }}
                   />
                 </Paper>
-                {/* 
-                <Paper style={{ color: textColor, marginBottom:'10px' }}>
-                  <TextField
-                    id="phone"
-                    onChange={handleChange}
-                    value={inputs.phone}
-                    name="phone"
-                    label="Phone Number"
-                  />
-                  <br />
-                </Paper> */}
-                {/* <FormControl required name="education" onChange={handleChange} value={inputs.education}>
-            <FormLabel id="education">Highest level of education</FormLabel>
-            <RadioGroup>
-              <FormControlLabel
-                value="highschool"
-                control={<Radio />}
-                label="High School"
-              />
-              <FormControlLabel
-                value="college"
-                control={<Radio />}
-                label="College"
-              />
-              <FormControlLabel
-                value="university"
-                control={<Radio />}
-                label="University"
-              />
-            </RadioGroup>
-          </FormControl> */}
-
-                {/* <TextField
-            required
-            id="location"
-            onChange={handleChange}
-            value={inputs.location}
-            name="location"
-            label="Location"
-          />
-          <br />
-          <TextField
-            required
-            id="industry"
-            onChange={handleChange}
-            value={inputs.industry}
-            name="industry"
-            label="Industry"
-          />
-          <br /> */}
+            
                 <Button type="submit" variant="outlined" style={{ padding: '10px' }}>
                   Sign Up
                 </Button>
