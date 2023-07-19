@@ -1,37 +1,30 @@
 const mongoose = require('mongoose');
 
-const postSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  date_posted: {
-    type: Date,
-    default: Date.now,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-  candidates: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Candidate',
+const PostSchema = new mongoose.Schema({
+    postTitle: {
+        type: String,
     },
-  ],
-  selectedCandidates: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Candidate',
+    postDescription: {
+        type: String,
     },
-  ],
+    datePosted: {
+        type: Date,
+        default: Date.now
+    },
+    postLocation: {
+        type: String,
+    },
+    candidatesApplied: [],
+    selectedCandidates: [],
+    postCompany: {
+        type: String
+    },
+    postId: {
+        type: String,
+        default: ""
+    }
 });
 
-const Post = mongoose.model('Post', postSchema);
+const PostModel = mongoose.model('Post', PostSchema);
 
-module.exports = Post;
+module.exports = PostModel;
