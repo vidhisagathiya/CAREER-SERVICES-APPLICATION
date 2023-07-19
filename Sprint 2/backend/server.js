@@ -1,24 +1,31 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require('express')
+const app= express()
+require('dotenv').config()
+const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-
-const app = express();
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+var morgan = require('morgan') // api
 
 
-const DB_URI = 'mongodb+srv://server-address-here'; // Replace with your MongoDB connection URI
+const signUpRoutes = require('./routes/SignUpRoutes')
 
-mongoose.connect(DB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+//CONNECT DATABASE
+mongoose.connect('mongodb+srv://sep:sep@superheros.3gh31.mongodb.net/?retryWrites=true&w=majority',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(con =>{
+    console.log(con.connections)
+    console.log('DB connected')
 })
-.then(() => {
-  console.log('Connected to MongoDB');
-})
-.catch((error) => {
-  console.error('Error connecting to MongoDB:', error);
-});
+
+//MIDDLEWARE
+app.use(morgan('dev'))
+app.use(cors())
+app.use(bodyParser.json())
+
+//ROUTES MIDDLEWARE
+app.use('/Signup',signUpRoutes)
+
+//LISTEN on port 9000
+    const port = process.env.PORT || 9000
+app.listen(port, () => console.log('server started'))
