@@ -4,7 +4,7 @@ const login = async (req, res) => {
     const { email, password } = req.body;
   
     try {
-      // Check if the candidate exists in the database
+      // Check if the candidate exists in the database.
       const candidate = await Candidate.findOne({ email });
   
       if (!candidate) {
