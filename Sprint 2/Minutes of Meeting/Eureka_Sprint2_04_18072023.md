@@ -34,7 +34,7 @@ _Karnik Shah_
 
 ### 3. Planning for the upcoming sprint
 
-**Summary of Discussion**: The team's primary objectives are to resolve the remaining outstanding issues, efficiently manage the project scope, and enhance communication, all of which are aimed at improving the overall efficiency and quality of the project in the upcoming sprint. Once the remaining stories of Sprint 2 are completed, the team will shift its focus towards implementing the remaining features.
+**Summary of Discussion**: The team's primary objectives are to resolve the remaining outstanding issues, efficiently manage the project scope, and enhance communication, all of which are aimed at improving the overall efficiency and quality of the project in the upcoming sprint. Once the remaining stories of Sprint 2 are completed, the team will shift its focus towards implementing the remaining features for Sprint 3.
 
 ---
 
