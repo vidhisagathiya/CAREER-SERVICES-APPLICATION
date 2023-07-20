@@ -1,7 +1,7 @@
  # Career Services Application
 
 <p align="center">
-  <img width="560" height="350" src="./ONLINE-JOB-SEARCH-1024x512.png">
+  <img width="550" height="340" src="./ONLINE-JOB-SEARCH-1024x512.png">
 </p>
 
 ## Table of Contents
