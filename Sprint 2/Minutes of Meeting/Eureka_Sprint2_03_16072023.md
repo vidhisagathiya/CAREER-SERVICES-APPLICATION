@@ -24,7 +24,7 @@ _Karnik Shah_
 
 ### 2. Stutus of task and deliverables for Sprint 2
 
-**Summary of Discussion**: Despite the challenges faced during Sprint 2, the team managed to achieve significant progress on various tasks and deliverables. Completed most of the stories of feature 1, feature 2 and feature 3.
+**Summary of Discussion**: Despite the challenges faced during Sprint 2, the team managed to achieve significant progress on various tasks and deliverables. Completed most of the stories of feature 1 and feature 2.
 
 ---
 
