@@ -8,24 +8,24 @@ const PostDetails = () => {
   const [candidates, setCandidates] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-const [selectedCandidates, setSelectedCandidates] = useState([]);
+  const [selectedCandidates, setSelectedCandidates] = useState([]);
 
-useEffect(() => {
-  const fetchSelectedCandidates = async () => {
-    try {
-      const response = await fetch(`http://localhost:9000/Posts/${postId}/selectedCandidates`);
-      if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
+  useEffect(() => {
+    const fetchSelectedCandidates = async () => {
+      try {
+        const response = await fetch(`http://localhost:9000/Posts/${postId}/selectedCandidates`);
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+        const data = await response.json();
+        setSelectedCandidates(data.data.selectedCandidates);
+      } catch (err) {
+        console.error('Error fetching selected candidates:', err);
       }
-      const data = await response.json();
-      setSelectedCandidates(data.data.selectedCandidates);
-    } catch (err) {
-      console.error('Error fetching selected candidates:', err);
-    }
-  };
+    };
 
-  fetchSelectedCandidates();
-}, [postId]);
+    fetchSelectedCandidates();
+  }, [postId]);
 
 
   const handleSelectForInterview = async (candidateId) => {
@@ -40,6 +40,19 @@ useEffect(() => {
       setCandidates(candidates.filter((candidate) => candidate._id !== candidateId));
     } catch (err) {
       console.error('Error selecting candidate for interview:', err);
+    }
+  };
+
+  const handleDeletePost = async () => {
+    try {
+      await fetch(`http://localhost:9000/Posts/deletePost/${postId}`, {
+        method: 'DELETE',
+      });
+      // Redirect to another page after successful deletion, e.g., the home page
+      // Replace this with the desired path
+      window.location.href = '/';
+    } catch (err) {
+      console.error('Error deleting post:', err);
     }
   };
 
@@ -85,23 +98,29 @@ useEffect(() => {
   }, [candidateIds]);
 
   return (
-    <div>
+    <div className="container2">
+      <p className="form-title2" style={{ paddingTop: "5%" }}>Applied Candidates</p>
       {loading && <div>Loading...</div>}
       {error && <div>{`Error fetching data: ${error}`}</div>}
-   
-      <p className="form-title2" style={{ paddingTop: "5%" }}>Candidates applied for this Job Posting</p>
-      
+      <div className="flex">
+        <p style={{ fontWeight: '700', fontSize: '17px', margin: '15px 0 0' }}>Candidate Names</p>
+        <p style={{ fontWeight: '700', fontSize: '17px', margin: '15px 0 0' }}>Email Address</p>
+        {/* <p style={{ fontWeight: '700', fontSize: '17px', textDecoration: 'underline', margin: '15px 0 0' }}>Resume</p> */}
+        <p style={{ fontWeight: '700', fontSize: '17px', margin: '15px 0 0' }}>Status</p>
+      </div>
       <List>
-        {candidates && 
+        {candidates &&
           candidates.map((candidate, index) => (
             <ListItem key={index}>
-              <ListItemText primary={candidate.name} />
-              <Button variant="contained" onClick={() => handleSelectForInterview(candidate._id)}>
+              <ListItemText primary={candidate.name} style={{ textAlign: 'center' }} />
+              <ListItemText primary={candidate.email} style={{ textAlign: 'center' , marginRight:'25px' }} />
+              {/* <ListItemText primary={candidate.name} style={{ textAlign: 'center' }} /> */}
+              <Button variant="outlined" onClick={() => handleSelectForInterview(candidate._id)} style={{ minWidth: '195px', maxHeight: '30px', fontSize: '13px', textTransform: 'capitalize', marginRight:'10px' }}>
                 Select for Interview
               </Button>
             </ListItem>
           ))}
-          {selectedCandidates &&
+        {selectedCandidates &&
           selectedCandidates.map((candidate, index) => (
             <ListItem key={index}>
               <ListItemText primary={candidate.name} />
@@ -111,9 +130,14 @@ useEffect(() => {
             </ListItem>
           ))}
       </List>
+      <div className="bt">
+        <Button variant="contained" color="error" style={{ margin: '25px auto' }} onClick={handleDeletePost} >
+          Delete Post
+        </Button>
+      </div>
     </div>
   );
-  
+
 };
 
 export default PostDetails;
