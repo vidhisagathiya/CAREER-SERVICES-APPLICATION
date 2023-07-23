@@ -47,6 +47,28 @@ const getUserById = async (req, res) => {
     }
 };
 
+const getAllUsers = async (req, res) => {
+    try {
+        const users = await User.find()
+
+        res.status(200).json({
+            success: true,
+            status: 'success',
+            results: users.length,
+            data: {
+                all_users: users
+            }
+        })
+    } catch (error) {
+        res.status(404).json({
+            success: false,
+            status: 'fail',
+            message: error,
+            value: null,
+        })
+    }
+
+};
 
 const updateUser = async (req, res) => {
     try {
@@ -58,7 +80,7 @@ const updateUser = async (req, res) => {
             return res.status(400).json({
                 success: false,
                 status: "fail",
-                message: "Invalid updates received",
+                message: "Invalid updates!",
             });
         }
 
@@ -93,4 +115,66 @@ const updateUser = async (req, res) => {
 
 };
 
-module.exports = {getUser, getUserById, updateUser};
+const deleteUser = async (req, res) => {
+    try {
+        const deletedUser = await User.findByIdAndDelete(req.params.id)
+
+        res.status(204).json({
+            status: 'success',
+            data: deletedUser
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            status: 'fail',
+            message: error
+        })
+    }
+
+};
+
+const deleteAllUsers = async (req, res) => {
+
+    try {
+        const deletedUsers = await User.deleteMany({})
+
+        res.status(200).json({
+            status: 'success',
+            success: true,
+        })
+    } catch (error) {
+        res.status(500).json({
+            status: 'fail',
+            message: error,
+            success: false,
+        })
+    }
+
+};
+
+const addInterview = async (req, res) => {
+
+    try {
+        const user = await User.findByIdAndUpdate(
+            req.params.userId,
+            { $addToSet: { interviews: req.params.postId } },
+            { new: true, runValidators: true }
+        );
+        res.status(200).json({
+            success: true,
+            status: 'success',
+            data: {
+                user,
+            },
+        });
+    } catch (error) {
+        res.status(500).json({
+            status: 'fail',
+            message: error,
+            success: false,
+        });
+    }
+
+};
+
+module.exports = { getUser, getUserById, getAllUsers, updateUser, deleteUser, deleteAllUsers, addInterview };
