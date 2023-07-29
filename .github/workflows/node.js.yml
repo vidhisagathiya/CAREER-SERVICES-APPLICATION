@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "Sprint 3", "main" ]
+    branches: [ "sagar-ci-testing-branch", "Sprint 3", "main" ]
   pull_request:
-    branches: [ "Sprint 3", "main" ]
+    branches: [ "sagar-ci-testing-branch", "Sprint 3", "main" ]
 
 jobs:
   build:
