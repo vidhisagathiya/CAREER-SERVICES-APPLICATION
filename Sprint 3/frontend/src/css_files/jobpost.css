@@ -1,0 +1,121 @@
+.container1 {
+    max-width: 750px;
+    margin: auto;
+}
+
+.container2 {
+    max-width: 950px;
+    margin: auto;
+}
+
+.profile {
+    max-width: 550px;
+    margin: auto;
+}
+
+p.form-title2 {
+    color: #333333;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.profile p.h5 {
+    color: #333333;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.jobitem {
+    padding: 20px !important;
+    font-size: 16px !important;
+    border-radius: 13px !important;
+    font-weight: normal !important;
+}
+
+.dfj {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    text-decoration: none !important;
+    font-weight: 700;
+}
+
+.jobitem h4, .jobitem h5 {
+    margin: 0;
+    font-weight: normal !important;
+}
+
+.jobitem .hfive {
+    font-size: 16px !important;
+}
+.jobitem1 .hfive {
+    font-size: 15px !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    margin-bottom: 13px !important;
+    margin-top: 0;
+}
+
+.dfd {
+    display: flex;
+    font-size: 19px !important;
+    margin-bottom: 2px;
+    font-weight: 700 !important;
+}
+.jobitem h4{
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px;
+}
+.jobitem1 h4, .jobitem1 h5{
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    margin-top: 5px;
+    margin-bottom:7px;
+    font-style: italic;
+}
+
+.hone{
+    font-size: 24px;
+    margin: 0 !important;
+}
+
+.jobitem1 .hfour{
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 16px !important;
+}
+
+.jobitem1 .btnapply{
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    padding: 2px 14px;
+    margin-right: 5px;
+    color: black;
+    background-color: #fdde75;
+    line-height: 0;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
