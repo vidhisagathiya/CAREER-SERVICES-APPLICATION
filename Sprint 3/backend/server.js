@@ -1,46 +1,37 @@
-const express = require('express')
-const app= express()
-require('dotenv').config()
-const mongoose = require('mongoose')
-const cors = require('cors')
-const bodyParser = require('body-parser')
-var morgan = require('morgan') // api
+const express = require('express');
+const app= express();
+//require('dotenv').config();
+const mongoose = require('mongoose');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+var morgan = require('morgan'); 
 
-//IMPORT ROUTES
-const userRoutes = require('./routes/UsersRoutes')
-const postRoutes = require('./routes/PostsRoutes')
-const loginRoutes = require('./routes/LoginRoutes')
-const signUpRoutes = require('./routes/SignUpRoutes')
+//Importing Routes
+const userRoutes = require('./routes/userRoutes');
+const postRoutes = require('./routes/postRoutes');
+const loginRoutes = require('./routes/loginRoutes');
+const signUpRoutes = require('./routes/signUpRoutes');
 
-//CONNECT DATABASE
-//Atlas database otherwise:  mongoose.connect('mongodb://localhost/HirED_DB') for local DB
+//Connecting to Database
 mongoose.connect('mongodb+srv://sep:sep@superheros.3gh31.mongodb.net/?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(con =>{
     console.log(con.connections)
     console.log('DB connected')
-})
-
-//ALLOW USE OF BODY PARSER
-// app.use(express.urlencoded({extended: false})) // Pass elements in the forms to the routes
-
-//MIDDLEWARE
-app.use(morgan('dev'))
-app.use(cors())
-app.use(bodyParser.json())
-
-//ROUTES MIDDLEWARE
-app.use('/Users',userRoutes)
-app.use('/Posts',postRoutes)
-app.use('/Login',loginRoutes)
-app.use('/Signup',signUpRoutes)
+});
 
 
-//set ejs environment (html alternative)
-//app.set('view engine', 'ejs') // declare that we are going to use EJS
+app.use(morgan('dev'));
+app.use(cors());
+app.use(bodyParser.json());
 
+//Routes
+app.use('/Users',userRoutes);
+app.use('/Posts',postRoutes);
+app.use('/Login',loginRoutes);
+app.use('/Signup',signUpRoutes);
 
-//LISTEN on port 5000
-    const port = process.env.PORT || 9000
-app.listen(port, () => console.log('server started'))
+//Listen on port 9000
+const port = process.env.PORT || 9000
+app.listen(port, () => console.log('server started'));

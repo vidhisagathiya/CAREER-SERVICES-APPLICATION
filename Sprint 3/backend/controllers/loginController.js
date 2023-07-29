@@ -1,12 +1,11 @@
-const User = require('../models/users')
+const User = require('../models/users');
+const bcrypt = require('bcrypt');
 
-// General requests
-
-exports.login= async (req,res) => {  
-
-    const {email}=req.body;
+const login = async (req,res) => {  
+    try{
+    const {email, password}=req.body;
     const userExist = await User.findOne({email})
-    if(!userExist){                                             //CHECKS IF EMAIL EXISTS
+    if(!userExist){
         return res.status(400).json({
             success:false,
             message: "E-mail doesn't exist",
@@ -15,26 +14,30 @@ exports.login= async (req,res) => {
         })
     }
 
-    const mypassword=req.body.password
+    const isPasswordValid = await bcrypt.compare(password, userExist.password);
 
-    if(mypassword !== userExist.password)                       //CHECKS IF PASSWORD MATCHES TO THE ONE ON FILE
+    if(!isPasswordValid) 
     {   
         return res.status(400).json({
             success:false,
             message:"Wrong Password"
         })
     }
-    try{
-        res.status(200).json({                                 //RETURNS THE USER INFO
+    
+        res.status(200).json({
+            success: true,
             status: 'success',
             data: {
                 userExist
             }
         })
-    }catch(err){
+    }catch(error){
         res.status(406).json({
+            success: false,
             status:'fail',
-            message: err
+            message: error
         })
     }
-}
+};
+
+module.exports = {login};
