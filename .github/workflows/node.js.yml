@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "sagar-ci-testing-branch", "Sprint 3", "main" ]
+    branches: [ "sagar-ci-testing-branch", "Sprint 3" ]
   pull_request:
-    branches: [ "sagar-ci-testing-branch", "Sprint 3", "main" ]
+    branches: [ "sagar-ci-testing-branch", "Sprint 3" ]
 
 jobs:
   build:
@@ -31,8 +31,9 @@ jobs:
       working-directory: './Sprint 3/backend'
       run: |
         npm ci
+        npm test
         #npm run build  # Example: Run the build script
-        #npm test
+        
       
     #- run: npm ci 
     #  working-directory: ./Sprint\ 2/backend
