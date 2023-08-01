@@ -6,10 +6,11 @@ const PostDetails = () => {
   const { postId } = useParams();
   const [candidateIds, setCandidateIds] = useState(null);
   const [candidates, setCandidates] = useState([]);
+  const [selectedCandidates, setSelectedCandidates] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [selectedCandidates, setSelectedCandidates] = useState([]);
 
+  // Fetch selected candidates for the post
   useEffect(() => {
     const fetchSelectedCandidates = async () => {
       try {
@@ -27,15 +28,19 @@ const PostDetails = () => {
     fetchSelectedCandidates();
   }, [postId]);
 
-
+  // Function to handle selecting a candidate for interview
   const handleSelectForInterview = async (candidateId) => {
     try {
-      await fetch(`http://localhost:9000/Posts/Posts/${postId}/selectCandidate/${candidateId}`, {
-        method: 'PATCH',
-      });
-      await fetch(`http://localhost:9000/Users/Users/${candidateId}/addInterview/${postId}`, {
-        method: 'PATCH',
-      });
+      // Update the post and the candidate with the interview status
+      await Promise.all([
+        fetch(`http://localhost:9000/Posts/Posts/${postId}/selectCandidate/${candidateId}`, {
+          method: 'PATCH',
+        }),
+        fetch(`http://localhost:9000/Users/Users/${candidateId}/addInterview/${postId}`, {
+          method: 'PATCH',
+        }),
+      ]);
+
       // Refresh the candidates list to reflect the change
       setCandidates(candidates.filter((candidate) => candidate._id !== candidateId));
     } catch (err) {
@@ -43,6 +48,7 @@ const PostDetails = () => {
     }
   };
 
+  // Function to handle deleting the post
   const handleDeletePost = async () => {
     try {
       await fetch(`http://localhost:9000/Posts/deletePost/${postId}`, {
@@ -56,6 +62,7 @@ const PostDetails = () => {
     }
   };
 
+  // Fetch candidate IDs for the post
   useEffect(() => {
     setLoading(true);
     fetch(`http://localhost:9000/Posts/${postId}/candidates`)
@@ -78,6 +85,7 @@ const PostDetails = () => {
       });
   }, [postId]);
 
+  // Fetch candidate details based on candidateIds
   useEffect(() => {
     if (candidateIds) {
       setLoading(true);
@@ -105,7 +113,6 @@ const PostDetails = () => {
       <div className="flex">
         <p style={{ fontWeight: '700', fontSize: '17px', margin: '15px 0 0' }}>Candidate Names</p>
         <p style={{ fontWeight: '700', fontSize: '17px', margin: '15px 0 0' }}>Email Address</p>
-        {/* <p style={{ fontWeight: '700', fontSize: '17px', textDecoration: 'underline', margin: '15px 0 0' }}>Resume</p> */}
         <p style={{ fontWeight: '700', fontSize: '17px', margin: '15px 0 0' }}>Status</p>
       </div>
       <List>
@@ -113,9 +120,8 @@ const PostDetails = () => {
           candidates.map((candidate, index) => (
             <ListItem key={index}>
               <ListItemText primary={candidate.name} style={{ textAlign: 'center' }} />
-              <ListItemText primary={candidate.email} style={{ textAlign: 'center' , marginRight:'0px' }} />
-              {/* <ListItemText primary={candidate.name} style={{ textAlign: 'center' }} /> */}
-              <Button variant="outlined" onClick={() => handleSelectForInterview(candidate._id)} style={{ minWidth: '195px', maxHeight: '30px', fontSize: '13px', textTransform: 'capitalize', marginRight:'5px' }}>
+              <ListItemText primary={candidate.email} style={{ textAlign: 'center', marginRight: '0px' }} />
+              <Button variant="outlined" onClick={() => handleSelectForInterview(candidate._id)} style={{ minWidth: '195px', maxHeight: '30px', fontSize: '13px', textTransform: 'capitalize', marginRight: '5px' }}>
                 Select for Interview
               </Button>
             </ListItem>
@@ -131,13 +137,12 @@ const PostDetails = () => {
           ))}
       </List>
       <div className="bt">
-        <Button variant="contained" color="error" style={{ margin: '25px auto' }} onClick={handleDeletePost} >
+        <Button variant="contained" color="error" style={{ margin: '25px auto' }} onClick={handleDeletePost}>
           Delete Post
         </Button>
       </div>
     </div>
   );
-
 };
 
 export default PostDetails;
