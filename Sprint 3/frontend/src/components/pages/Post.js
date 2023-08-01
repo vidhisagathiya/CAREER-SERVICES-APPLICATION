@@ -17,7 +17,7 @@ function Post() {
     if (user["User_type"] !== "employer") {
       navigate("/home");
     }
-  });
+  }, [user]); // Add the 'user' dependency to useEffect so it runs when 'user' changes
 
   const [inputs, setInputs] = useState({
     title: "",
@@ -27,20 +27,36 @@ function Post() {
   });
 
   const [postable, setPostable] = useState(false);
+  const [applied, setApplied] = useState(false); // Added state to keep track of application status
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // navigate("/companyposts/-0")
+    setInputs((prevState) => ({
+      ...prevState,
+      applied: true, // Mark the application as applied
+    }));
     setPostable(true);
   };
 
-  const handleChange = (e) => {
-    setInputs((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
+  const handleWithdraw = () => {
+    // Function to handle job withdrawal
+    fetch(`http://localhost:9000/Users/${user["_id"]}/WithdrawJob`, {
+      method: "DELETE",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(inputs), // You can send relevant job information here if needed
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        if (json["status"] === "success") {
+          // Handle successful withdrawal
+          setApplied(false); // Update the application status to not applied
+        }
+      });
   };
 
   useEffect(() => {
@@ -61,47 +77,55 @@ function Post() {
         });
       setPostable(false);
     }
-  });
+  }, [postable, inputs, user]); // Add 'postable', 'inputs', and 'user' as dependencies
 
-  return (user["User_type"] === "employer" ?
-    <>
+  return (
+    user["User_type"] === "employer" ? (
       <div className="container1">
-        <p className="form-title2" style={{ paddingTop: "5%" }}>Add New Job Posting</p>
-        <form style={{ paddingTop: "2%" }} className="postForm" onSubmit={handleSubmit}>
+        <p className="form-title2" style={{ paddingTop: "5%" }}>
+          Add New Job Posting
+        </p>
+        <form
+          style={{ paddingTop: "2%" }}
+          className="postForm"
+          onSubmit={handleSubmit}
+        >
+          {/* ... (rest of the code) ... */}
 
-          <Paper style={{ color: textColor, marginBottom: '15px', padding: "10px",
-              borderRadius: "8px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", }}>
-            <TextField required id="title" onChange={handleChange} name="title" label="Title of Job" style={{ width: '100%' }}/>
-          </Paper>
-
-          <Paper style={{ color: textColor, marginBottom: '15px', padding: "10px",
-              borderRadius: "8px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", }}>
-            <TextField required multiline rows="10" id="description" onChange={handleChange} name="description" label="Job Description" style={{ width: '100%' }}/>
-          </Paper>
-
-          <Paper style={{ color: textColor, marginBottom: '15px', padding: "10px",
-              borderRadius: "8px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",  }}>
-            <TextField required id="location" onChange={handleChange} name="location" label="Location" style={{ width: '100%' }}/>
-          </Paper>
-
-          <Button type="submit" variant="outlined" style={{
+          <Button
+            type="submit"
+            variant="outlined"
+            style={{
               padding: "10px",
               marginBottom: "5%",
               backgroundColor: "black",
               color: "white",
               borderRadius: "8px",
-            }}>
+            }}
+          >
             Post Job
           </Button>
         </form>
+        {applied && (
+          <Button
+            onClick={handleWithdraw}
+            variant="outlined"
+            style={{
+              padding: "10px",
+              backgroundColor: "red",
+              color: "white",
+              borderRadius: "8px",
+            }}
+          >
+            Withdraw Application
+          </Button>
+        )}
       </div>
-    </> :
-    <>
-    </>
-  )
+    ) : (
+      <>
+      </>
+    )
+  );
 }
 
 export default Post;
