@@ -5,9 +5,15 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "sagar-ci-testing-branch", "sprint_3", "continuous-integration-testing" ]
+    branches: 
+      - 'sprint_3'
+      - 'continuous-integration-testing'
+      - 'sagar-ci-testing-branch'
   pull_request:
-    branches: [ "sagar-ci-testing-branch", "sprint_3", "continuous-integration-testing" ]
+    branches:
+      - 'sprint_3'
+      - 'continuous-integration-testing'
+      - 'sagar-ci-testing-branch'
 
 jobs:
   build:
