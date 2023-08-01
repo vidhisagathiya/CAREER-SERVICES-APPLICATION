@@ -17,6 +17,26 @@ const Users_data = new mongoose.Schema({
         minlength: [7, "Password must have at least 7 characters"],
         required:[true, 'please add a password']
     },
+    
+    description: {
+        type: String,
+        required: true,
+      },
+      
+    industry: {
+        type: String,
+        required: true,
+      },
+    
+    location: {
+        type: String,
+        required: true,
+      },
+    
+    website: {
+        type: String,
+        required: true,
+      },
 
     email:{
         type: String
