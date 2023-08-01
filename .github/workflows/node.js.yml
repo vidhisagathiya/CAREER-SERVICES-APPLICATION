@@ -8,7 +8,6 @@ on:
     branches: [ "sagar-ci-testing-branch", "sprint_3", "continuous-integration-testing" ]
   pull_request:
     branches: [ "sagar-ci-testing-branch", "sprint_3", "continuous-integration-testing" ]
-  workflow_dispatch:
 
 jobs:
   build:
