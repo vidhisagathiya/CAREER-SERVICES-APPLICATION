@@ -6,7 +6,7 @@ const postController = require('../controllers/postController');
 
 userRouter
     .route('/:id')    
-    .get(userController.getUser)    
+    .get(userController.getUser)    // Function to get user by id
     .patch(userController.updateUser)
     .delete(userController.deleteUser);
 
@@ -26,7 +26,7 @@ userRouter
     .delete(postController.deletePost)
     .patch(postController.updatePost);
 
-userRouter.get('/Users/:userId', userController.getUserById);
+userRouter.get('/Users/:userId', userController.getUserById); // Function to get user by id
 
 userRouter.patch('/:userId/update', userController.updateUser);
 

@@ -28,6 +28,7 @@ const getUser = async (req, res) => {
     }
 };
 
+// Function to get user by id
 const getUserById = async (req, res) => {
     try {
         const user = await User.findById(req.params.userId);
@@ -60,7 +61,7 @@ const getAllUsers = async (req, res) => {
             }
         })
     } catch (error) {
-        res.status(404).json({
+        res.status(500).json({
             success: false,
             status: 'fail',
             message: error,
