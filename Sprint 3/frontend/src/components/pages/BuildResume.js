@@ -21,8 +21,7 @@ const BuildResume = () => {
     phone: user ? user.phone : '',
   });
   const buildResume = () => {
-    // Implement the logic to navigate to the "BuildResume" component here
-    navigate('/resume'); // Change '/build-resume' to the actual path of your "BuildResume" component
+    navigate('/resume'); 
   };
 
   const handleSubmit = async (event) => {
@@ -92,7 +91,6 @@ const BuildResume = () => {
           </form>
 
         </Container>
-        {/* <Button variant="contained" onClick={handleLogout}>Log Out</Button> */}
       </div> : <></>
   )
 }
