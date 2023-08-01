@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const login = async (req,res) => {  
     try{
     const {email, password}=req.body;
+    
     const userExist = await User.findOne({email})
     if(!userExist){
         return res.status(400).json({
