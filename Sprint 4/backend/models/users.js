@@ -20,22 +20,22 @@ const Users_data = new mongoose.Schema({
     
     description: {
         type: String,
-        required: true,
+        //required: true,
       },
       
     industry: {
         type: String,
-        required: true,
+       // required: true,
       },
     
     location: {
         type: String,
-        required: true,
+        //required: true,
       },
     
     website: {
         type: String,
-        required: true,
+        //required: true,
       },
 
     email:{

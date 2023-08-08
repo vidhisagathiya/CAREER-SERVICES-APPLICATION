@@ -16,7 +16,7 @@ const getUser = async (req, res) => {
         res.status(200).json({
             success: true,
             status: 'success',
-            results: req.params._id,
+            results: id,
             data: { myUser: user },
         })
     } catch (error) {
