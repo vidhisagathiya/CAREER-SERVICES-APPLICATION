@@ -1,7 +1,7 @@
 const User = require('../models/users');
 const bcrypt = require('bcrypt');
 
-// TODO: Need to add password hashing
+
 const createUser = async (req, res) => {
     try {
         const { email, company } = req.body;
@@ -33,9 +33,9 @@ const createUser = async (req, res) => {
         const password = await bcrypt.hash(req.body.password, 10);
         userDetails.password = password;
 
-        const collectionSize = (await User.collection.stats()).size.toString()
+        const collectionSize = (await User.countDocuments({}))
 
-        if (userDetails.User_type == "Company") {
+        if (userDetails.User_type == "employer") {
             userDetails._id = userDetails.company + collectionSize;
         }
         else {
@@ -44,7 +44,7 @@ const createUser = async (req, res) => {
 
         const newUser = await User.create(userDetails)
         
-        await newUser.save();
+        //await newUser.save();
 
         res.status(200).json({
             success: true,
