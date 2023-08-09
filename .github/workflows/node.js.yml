@@ -36,7 +36,7 @@ jobs:
 #         cache: 'npm'
 #         cache-dependency-path: './Sprint 3/backend/package-lock.json'
     - name: Install Dependencies and Run NPM Commands in Child Folder
-      working-directory: './Sprint 3/backend'
+      working-directory: './Sprint 4/backend'
       run: |
         npm ci
         npm test
