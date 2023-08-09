@@ -2,12 +2,12 @@ const Post = require('../models/posts');
 const User = require('../models/users');
 
 const createPost = async (req, res) => {
-    const rec_post = req.body;
-    const increment = (await Post.collection.stats()).size.toString();
-
-    rec_post._id = rec_post.title + "-" + increment;
-    rec_post.company = rec_post.company;
+    
     try {
+        const rec_post = req.body;
+        const increment = (await Post.collection.stats()).size.toString();
+        rec_post._id = rec_post.title + "-" + increment;
+        rec_post.company = rec_post.company;
         const newPost = await Post.create(rec_post);
         res.status(200).json({
             success: true,
@@ -41,7 +41,7 @@ const getPostById = async (req, res) => {
         res.status(200).json({
             success: true,
             status: 'success',
-            results: req.params._id,
+            results: req.params.id,
             data: {
                 myPost: post
             }
