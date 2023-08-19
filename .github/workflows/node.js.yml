@@ -7,13 +7,13 @@ on:
   push:
     branches: 
       - 'main'
-      - 'sprint_3'
+      - 'sprint_4'
       - 'continuous-integration-testing'
       - 'sagar-ci-testing-branch'
   pull_request:
     branches:
       - 'main'
-      - 'sprint_3'
+      - 'sprint_4'
       - 'continuous-integration-testing'
       - 'sagar-ci-testing-branch'
 
@@ -36,7 +36,7 @@ jobs:
 #         cache: 'npm'
 #         cache-dependency-path: './Sprint 3/backend/package-lock.json'
     - name: Install Dependencies and Run NPM Commands in Child Folder
-      working-directory: './Sprint 3/backend'
+      working-directory: './Sprint 4/backend'
       run: |
         npm ci
         npm test
